@@ -10,7 +10,7 @@ git_branch()
   if [ "$branch_switch" == "Y" ];then
        read -p '请输入要切换的分支的名称：' branch_name 
        git switch $branch_name
-      echo '分支切换成功,本页面将在3秒后关闭......'
+#      echo '分支切换成功,本页面将在3秒后关闭......'
       sleep 3
       exit
  #      git add .
@@ -22,10 +22,8 @@ git_branch()
        git add .
        read -p '请输入提交描述信息：' commit_m
        git commit -m $commit_m
-       echo '获取最新的远程仓库代码：'
-      git pull
-     echo '向远程仓库提交：'
-       git push origin $branch_name
+       echo '向远程仓库提交：'
+       git push origin luzhanxing
        echo '您已经成功提交到远程仓库,该页面将在3秒后关闭.......'
        sleep 3
        exit
