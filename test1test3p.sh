@@ -9,16 +9,18 @@ git branch
   if [ "$branch_switch" == "Y" ];then
        read -p '请输入要切换的分支的名称：' branch_name 
        git switch $branch_name
-       git add .
-       resd -p '请输入描述信息：' commit_m
-       git commit -m $commit_m
-       git pull
-       git push origin $branch_name
+       
   elif [  "$branch_switch" == "N" ];then
        git add .
-       read -p '请输入描述信息：' commit_m
+       read -p '请输入提交描述信息：' commit_m
        git commit -m $commit_m
+       echo '拉取远程仓库最新代码：'
+      git pull
+      echo '将本地推动到远程仓库'
        git push origin $branch_name
+      echo '您已成功推送'
+      sleep 3s
+      exit
   else
     echo '请按提示输入：'
   fi
