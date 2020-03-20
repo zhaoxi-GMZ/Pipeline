@@ -20,8 +20,6 @@ git_branch()
        read -p '请输入提交描述信息：' commit_m
        git commit -m $commit_m
        echo '拉取远程仓库最新代码：'
-      git pull
-      echo '将本地推动到远程仓库'
        git push origin $branch_name
       echo '您已成功推送至远程仓库，改页面将在三秒后关闭......'
       sleep 3s
