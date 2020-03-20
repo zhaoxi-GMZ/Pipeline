@@ -10,6 +10,9 @@ git_branch()
   if [ "$branch_switch" == "Y" ];then
        read -p '请输入要切换的分支的名称：' branch_name 
        git switch $branch_name
+       echo '切换分支成功，3秒后将关闭此页面.......'
+       sleep 3
+       exit
        
        
   elif [  "$branch_switch" == "N" ];then
