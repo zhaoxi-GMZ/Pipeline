@@ -4,8 +4,7 @@ public class HelloWorld {
 
 	public int helloWorld(int aInt) {
 		// TODO Auto-generated method stub
-		Syst.out.println("HelloWorld!!!");
-22
+		System.out.println("HelloWorld!!!");
 		return aInt;
 	}
 	
